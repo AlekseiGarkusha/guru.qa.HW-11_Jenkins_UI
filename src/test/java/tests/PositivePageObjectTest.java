@@ -20,10 +20,9 @@
 
   import static com.codeborne.selenide.Selenide.open;
 
-  public class PositiveTest {
+  public class PositivePageObjectTest {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
-
 
     @BeforeAll
     public static void openPage() {

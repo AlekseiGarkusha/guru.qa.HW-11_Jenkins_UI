@@ -7,6 +7,20 @@ repositories {
   mavenCentral()
 }
 
+ext {
+  SelenideVersion = '6.19.1'
+  AllureVersion = '2.24.0'
+  Slf4Version = '2.0.7'
+
+  JupiterApiVersion = '5.10.0'
+  JupiterEngineVersion = '5.10.0'
+  JupiterParamsVersion = '5.10.0'
+
+  AllureJunit5Version = '2.33.0'
+  JavaFakerVersion = '1.0.2'
+}
+
+
 allure {
   report {
     version.set("2.20.0")
@@ -22,19 +36,18 @@ allure {
 }
 
 dependencies {
-  implementation("com.codeborne:selenide:7.15.1")
+  testImplementation(
+    "com.codeborne:selenide:$SelenideVersion",
+    "io.qameta.allure:allure-selenide:$AllureVersion",
+    "org.slf4j:slf4j-simple:$Slf4Version",
 
-  testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
-  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+    "org.junit.jupiter:junit-jupiter-api:$JupiterApiVersion",
+    "org.junit.jupiter:junit-jupiter-engine:$JupiterEngineVersion",
+    "org.junit.jupiter:junit-jupiter-params:$JupiterParamsVersion",
 
-  testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.0")
-
-  testImplementation("io.qameta.allure:allure-junit5:2.33.0")
-  implementation("io.qameta.allure:allure-selenide:2.33.0")
-
-  testImplementation("com.github.javafaker:javafaker:1.0.2")
-
-  testRuntimeOnly("org.slf4j:slf4j-simple:2.0.17")
+    "io.qameta.allure:allure-junit5:$AllureJunit5Version",
+    "com.github.javafaker:javafaker:$JavaFakerVersion"
+  )
 }
 
 tasks.withType(Test) {

@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">30.976s</div>
+<div class="counter">37.065s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,12 +61,46 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
+<a href="#">Failed tests</a>
+</li>
+<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard error</a>
 </li>
 </ul>
+<div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="practiceFormTest()"></a>
+<h3 class="failures">Заполнение всех полей формы студента, и проверка на соответствие</h3>
+<span class="code">
+<pre>Element should have partial text &quot;26 December,2007&quot; {.table-responsive/by text: Date of Birth/By.xpath: ..}
+Element: '&lt;tr&gt;Date of Birth 26 November,2007&lt;/tr&gt;'
+Actual value: text=&quot;Date of Birth 26 November,2007&quot;
+Screenshot: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1775743286326.0.png
+Page source: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1775743286326.0.html
+Timeout: 4 s.
+	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:149)
+	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:127)
+	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:104)
+	at app//com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at app//com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:165)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy23.shouldHave(Unknown Source)
+	at app//pages.components.ComparisonFieldsComponent.checkField(ComparisonFieldsComponent.java:16)
+	at app//pages.components.ComparisonFieldsComponent.comparisonFieldsPositiveTest(ComparisonFieldsComponent.java:25)
+	at app//tests.PositiveTest.practiceFormTest(PositiveTest.java:65)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -79,20 +113,23 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Заполнение всех полей формы студента, и проверка на соответствие</td>
-<td class="success">practiceFormTest()</td>
-<td class="success">30.976s</td>
-<td class="success">passed</td>
+<td class="failures">Заполнение всех полей формы студента, и проверка на соответствие</td>
+<td class="failures">practiceFormTest()</td>
+<td class="failures">37.065s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
 <div class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-апр. 09, 2026 2:51:55 PM org.openqa.selenium.devtools.DevToolsProvider getImplementation
-INFO: WebDriver augmented with DevTools interface; connection will not be verified until first use.
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.15.1 / Selenium 4.41.0 / chrome 128.0.6613.137 linux
+<pre>[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=128.0.6613.137 Platform=linux
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -&gt; RemoteWebDriver: chrome on linux (fcd54fa58d6d7a786d720c69be40dd48)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (fcd54fa58d6d7a786d720c69be40dd48),proxy=null,downloadsFolder=null] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
 </pre>
 </span>
 </div>
@@ -104,7 +141,7 @@ INFO: WebDriver augmented with DevTools interface; connection will not be verifi
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.0.0</a> at 9 апр. 2026 г., 14:52:19</p>
+<a href="https://www.gradle.org">Gradle 9.0.0</a> at 9 апр. 2026 г., 17:01:29</p>
 </div>
 </div>
 </body>
