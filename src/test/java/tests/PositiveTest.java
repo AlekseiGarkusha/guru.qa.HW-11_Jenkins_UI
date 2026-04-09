@@ -50,7 +50,7 @@
         .chooseGender(testData.userFakerGender)
         .typeUserNumber(testData.userFakerNumber)
         .setDateOfBirth(testData.userFakerDay, testData.userFakerMonth,testData.userFakerYear)
-        .setUserSubjets(testData.userFakerNumber)
+        .setUserSubjets("test")
         .setUserHobbies(testData.userFakerHobby)
         .uploadPicture(testData.userPicture)
         .typeUserCurrentAddress(testData.userCurrentAddress)
