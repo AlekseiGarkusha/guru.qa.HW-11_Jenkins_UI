@@ -42,7 +42,7 @@
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
-      open(baseUrl + TestData.automationFormUrl);
+      open("https://demoqa.com/automation-practice-form");
 
       registrationPage
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)

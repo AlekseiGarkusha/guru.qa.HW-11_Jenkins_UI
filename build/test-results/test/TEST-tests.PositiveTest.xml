@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-09T10:50:58.116Z" hostname="DESKTOP-A8CGM4F" time="0.094">
+<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-09T11:29:41.764Z" hostname="DESKTOP-A8CGM4F" time="0.139">
   <properties/>
-  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveTest" time="0.094">
+  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveTest" time="0.139">
     <failure message="java.lang.IllegalArgumentException: Class not found: 1920x1080" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Class not found: 1920x1080
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:59)
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:44)
@@ -26,7 +26,7 @@
 	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:31)
 	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:111)
 	at com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at tests.PositiveTest.practiceFormTest(PositiveTest.java:44)
+	at tests.PositiveTest.practiceFormTest(PositiveTest.java:45)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
