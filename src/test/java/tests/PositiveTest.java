@@ -16,6 +16,7 @@
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
 
+  import static com.codeborne.selenide.Configuration.baseUrl;
   import static com.codeborne.selenide.Selenide.open;
 
   public class PositiveTest {
@@ -24,7 +25,7 @@
 
     @BeforeAll
     public static void openPage() {
-      Configuration.baseUrl = "https://demoqa.com";
+      baseUrl = "https://demoqa.com";
       Configuration.browser = "1920x1080";
       Configuration.browserVersion = "128.0";
       Configuration.remote = "https://user1:12234@selenoid.autotests.cloud/wd/hub";
@@ -41,7 +42,7 @@
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
-      open(TestData.automationFormUrl);
+      open(baseUrl + TestData.automationFormUrl);
 
       registrationPage
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)

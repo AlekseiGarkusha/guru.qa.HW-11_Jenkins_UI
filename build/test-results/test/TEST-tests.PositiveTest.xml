@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-09T10:48:18.867Z" hostname="DESKTOP-A8CGM4F" time="0.005">
+<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-09T10:50:58.116Z" hostname="DESKTOP-A8CGM4F" time="0.094">
   <properties/>
-  <testcase name="initializationError" classname="tests.PositiveTest" time="0.005">
+  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveTest" time="0.094">
     <failure message="java.lang.IllegalArgumentException: Class not found: 1920x1080" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Class not found: 1920x1080
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:59)
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:44)
@@ -26,10 +26,9 @@
 	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:31)
 	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:111)
 	at com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at tests.PositiveTest.openPage(PositiveTest.java:32)
+	at tests.PositiveTest.practiceFormTest(PositiveTest.java:44)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.qameta.allure.junit5.AllureJunit5.processFixture(AllureJunit5.java:138)
-	at io.qameta.allure.junit5.AllureJunit5.interceptBeforeAllMethod(AllureJunit5.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 Caused by: java.lang.ClassNotFoundException: 1920x1080
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
@@ -39,7 +38,7 @@ Caused by: java.lang.ClassNotFoundException: 1920x1080
 	at java.base/java.lang.Class.forName(Class.java:421)
 	at java.base/java.lang.Class.forName(Class.java:412)
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:56)
-	... 27 more
+	... 26 more
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
