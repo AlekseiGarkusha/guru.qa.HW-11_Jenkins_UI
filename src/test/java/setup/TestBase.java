@@ -23,17 +23,21 @@
       ChromeOptions options = new ChromeOptions();
       options.addArguments("--remote-allow-origins=*");
 
-      String remote = System.getProperty("selenide.remote");
+      String remote = System.getProperty("remote", "false");
 
       Configuration.browser = System.getProperty("browser", "chrome");
       Configuration.browserSize = System.getProperty("resolution", "1920x1080");
       Configuration.timeout = 5000;
 
-      if (remote != null) {
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
-        Configuration.browserCapabilities = options;
+      if ("true".equals(remote)) {
+        // Jenkins / CI
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
+        Configuration.browserCapabilities = options;
       } else {
+        // Локально
         Configuration.browserCapabilities = options;
         Configuration.baseUrl = "https://demoqa.com";
       }
