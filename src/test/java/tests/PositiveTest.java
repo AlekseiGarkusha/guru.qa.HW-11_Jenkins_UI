@@ -17,6 +17,7 @@
   import pages.components.ComparisonFieldsComponent;
 
   import static com.codeborne.selenide.Configuration.baseUrl;
+  import static com.codeborne.selenide.Configuration.config;
   import static com.codeborne.selenide.Selenide.open;
 
   public class PositiveTest {
@@ -25,10 +26,11 @@
 
     @BeforeAll
     public static void openPage() {
-      baseUrl = "https://demoqa.com";
-      Configuration.browser = "1920x1080";
+      Configuration.browser = "chrome";
+      Configuration.baseUrl = "https://demoqa.com";
+      Configuration.browserSize = "1920x1080";
       Configuration.browserVersion = "128.0";
-      Configuration.remote = "https://user1:12234@selenoid.autotests.cloud/wd/hub";
+      Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
     }
 
@@ -42,7 +44,7 @@
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
-      open("https://demoqa.com/automation-practice-form");
+      open("/automation-practice-form");
 
       registrationPage
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)

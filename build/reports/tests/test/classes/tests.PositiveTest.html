@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.139s</div>
+<div class="counter">30.976s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,62 +61,12 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a href="#">Failed tests</a>
-</li>
-<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard error</a>
 </li>
 </ul>
-<div class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="practiceFormTest()"></a>
-<h3 class="failures">Заполнение всех полей формы студента, и проверка на соответствие</h3>
-<span class="code">
-<pre>java.lang.IllegalArgumentException: Class not found: 1920x1080
-	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:59)
-	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:44)
-	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:98)
-	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:56)
-	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:66)
-	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
-	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:43)
-	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:187)
-	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:183)
-	at com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:170)
-	at com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:131)
-	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:102)
-	at com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:44)
-	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:254)
-	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:69)
-	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
-	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
-	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:67)
-	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:31)
-	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:111)
-	at com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at tests.PositiveTest.practiceFormTest(PositiveTest.java:45)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.ClassNotFoundException: 1920x1080
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:421)
-	at java.base/java.lang.Class.forName(Class.java:412)
-	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:56)
-	... 26 more
-</pre>
-</span>
-</div>
-</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -129,10 +79,10 @@ Caused by: java.lang.ClassNotFoundException: 1920x1080
 </tr>
 </thead>
 <tr>
-<td class="failures">Заполнение всех полей формы студента, и проверка на соответствие</td>
-<td class="failures">practiceFormTest()</td>
-<td class="failures">0.139s</td>
-<td class="failures">failed</td>
+<td class="success">Заполнение всех полей формы студента, и проверка на соответствие</td>
+<td class="success">practiceFormTest()</td>
+<td class="success">30.976s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -140,6 +90,9 @@ Caused by: java.lang.ClassNotFoundException: 1920x1080
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+апр. 09, 2026 2:51:55 PM org.openqa.selenium.devtools.DevToolsProvider getImplementation
+INFO: WebDriver augmented with DevTools interface; connection will not be verified until first use.
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.15.1 / Selenium 4.41.0 / chrome 128.0.6613.137 linux
 </pre>
 </span>
 </div>
@@ -151,7 +104,7 @@ Caused by: java.lang.ClassNotFoundException: 1920x1080
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.0.0</a> at 9 апр. 2026 г., 14:29:42</p>
+<a href="https://www.gradle.org">Gradle 9.0.0</a> at 9 апр. 2026 г., 14:52:19</p>
 </div>
 </div>
 </body>
