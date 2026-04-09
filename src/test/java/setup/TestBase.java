@@ -30,17 +30,22 @@
       Configuration.timeout = 5000;
 
       if ("true".equals(remote)) {
-        // Jenkins / CI
+        // 🔥 Jenkins / CI
+
+        Configuration.remote = System.getProperty("remoteUrl");
+
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-        Configuration.browserCapabilities = options;
       } else {
-        // Локально
-        Configuration.browserCapabilities = options;
+        // 💻 Локально
+
+        Configuration.remote = null;
         Configuration.baseUrl = "https://demoqa.com";
       }
+
+      Configuration.browserCapabilities = options;
     }
 
     @BeforeEach
