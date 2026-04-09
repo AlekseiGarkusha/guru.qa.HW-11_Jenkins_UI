@@ -16,8 +16,6 @@
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
 
-  import static com.codeborne.selenide.Configuration.baseUrl;
-  import static com.codeborne.selenide.Configuration.config;
   import static com.codeborne.selenide.Selenide.open;
 
   public class PositiveTest {
@@ -52,7 +50,7 @@
         .chooseGender(testData.userFakerGender)
         .typeUserNumber(testData.userFakerNumber)
         .setDateOfBirth(testData.userFakerDay, testData.userFakerMonth,testData.userFakerYear)
-        .setUserSubjets(testData.userFakerSubject)
+        .setUserSubjets(testData.userFakerNumber)
         .setUserHobbies(testData.userFakerHobby)
         .uploadPicture(testData.userPicture)
         .typeUserCurrentAddress(testData.userCurrentAddress)
