@@ -1,1 +1,0 @@
-{"uuid":"d8f0fbd5-8b90-46c8-8072-9605157364e9","name":"Заполнение всех полей формы студента, и проверка на соответствие","children":["cb570880-1c25-41de-bd0f-55545ffde9a1"],"befores":[{"name":"logger","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1775723643414,"stop":1775723643418}],"afters":[],"start":1775723643350,"stop":1775723647098}
