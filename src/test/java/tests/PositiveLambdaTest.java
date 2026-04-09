@@ -24,8 +24,7 @@
   public class PositiveLambdaTest {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
-
-
+    
     @BeforeAll
     public static void openPage() {
       Configuration.browser = "chrome";
@@ -48,7 +47,6 @@
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
-
       step ("Open foarm", () -> {
         open("/automation-practice-form");
       });
@@ -58,7 +56,7 @@
           .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)
           .typeUserEmail(testData.userFakerEmail)
           .chooseGender(testData.userFakerGender)
-          .typeUserNumber(testData.userFakerNumber)
+          .typeUserNumber("44")
           .setDateOfBirth(testData.userFakerDay, testData.userFakerMonth,testData.userFakerYear)
           .setUserSubjets(testData.userFakerSubject)
           .setUserHobbies(testData.userFakerHobby)
