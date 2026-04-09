@@ -10,8 +10,10 @@
   package tests;
 
   import com.codeborne.selenide.Configuration;
+  import com.codeborne.selenide.logevents.SelenideLogger;
   import data.TestData;
   import io.qameta.allure.*;
+  import io.qameta.allure.selenide.AllureSelenide;
   import org.junit.jupiter.api.*;
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
@@ -22,6 +24,7 @@
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
 
+
     @BeforeAll
     public static void openPage() {
       Configuration.browser = "chrome";
@@ -30,6 +33,7 @@
       Configuration.browserVersion = "128.0";
       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
+      SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @Test
