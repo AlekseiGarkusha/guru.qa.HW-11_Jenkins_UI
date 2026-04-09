@@ -26,7 +26,8 @@
     public static void openPage() {
       Configuration.baseUrl = "";
       Configuration.browser = "1920x1080";
-      Configuration.remote = "https://selenoid.autotests.cloud/wd/hub";
+      Configuration.browserVersion = "128.0";
+      Configuration.remote = "https://user1:12234@selenoid.autotests.cloud/wd/hub";
 
       open(TestData.automationFormUrl);
     }
