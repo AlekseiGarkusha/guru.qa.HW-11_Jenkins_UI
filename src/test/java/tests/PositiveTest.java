@@ -33,6 +33,7 @@
     }
 
     @Test
+    @Epic("test")
     @Feature("Форма студента")
     @Story("Заполнение всех полей")
     @Owner("AlexeyGarkusha")
