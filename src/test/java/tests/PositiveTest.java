@@ -9,21 +9,25 @@
 
   package tests;
 
+  import com.codeborne.selenide.Configuration;
   import data.TestData;
   import io.qameta.allure.*;
   import org.junit.jupiter.api.*;
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
-  import setup.TestBase;
 
   import static com.codeborne.selenide.Selenide.open;
 
-  public class PositiveTest extends TestBase {
+  public class PositiveTest {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
 
     @BeforeAll
     public static void openPage() {
+      Configuration.baseUrl = "";
+      Configuration.browser = "1920x1080";
+      Configuration.remote = "https://selenoid.autotests.cloud/wd/hub";
+
       open(TestData.automationFormUrl);
     }
 

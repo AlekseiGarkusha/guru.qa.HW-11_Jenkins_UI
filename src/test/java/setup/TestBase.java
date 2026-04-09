@@ -4,7 +4,7 @@
    * Закрытие страницы
    */
 
-  package setup;
+//  package setup;
 
   import com.codeborne.selenide.Configuration;
   import com.codeborne.selenide.logevents.SelenideLogger;
@@ -16,46 +16,45 @@
 
   import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-  public class TestBase {
+//  public class TestBase {
 
-    @BeforeAll
-    public static void setup() {
-      ChromeOptions options = new ChromeOptions();
-      options.addArguments("--remote-allow-origins=*");
-
-      String remote = System.getProperty("remote", "false");
-
-      Configuration.browser = System.getProperty("browser", "chrome");
-      Configuration.browserSize = System.getProperty("resolution", "1920x1080");
-      Configuration.timeout = 5000;
-
-      if ("true".equals(remote)) {
-        // 🔥 Jenkins / CI
-
-        Configuration.remote = System.getProperty("remoteUrl");
-
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-
-      } else {
-        // 💻 Локально
-
-        Configuration.remote = null;
-        Configuration.baseUrl = "https://demoqa.com";
-      }
-
-      Configuration.browserCapabilities = options;
-    }
-
-    @BeforeEach
-    public void logger() {
-      SelenideLogger.addListener("allure", new AllureSelenide());
-    }
-
-    @AfterAll
-    public static void tearDown() {
-      closeWebDriver();
-    }
-  }
+//    @BeforeAll
+//    public static void setup() {
+//      ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--remote-allow-origins=*");
+//
+//      String remote = System.getProperty("remote", "false");
+//
+//      Configuration.browser = System.getProperty("browser", "chrome");
+//      Configuration.browserSize = System.getProperty("resolution", "1920x1080");
+//      Configuration.timeout = 5000;
+//
+//      if ("true".equals(remote)) {// 🔥 Jenkins / CI
+//
+//        Configuration.remote = System.getProperty("remoteUrl");
+//
+//        options.addArguments("--headless");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
+//
+//      } else {
+//        // 💻 Локально
+//
+//        Configuration.remote = null;
+//        Configuration.baseUrl = "https://demoqa.com";
+//      }
+//
+//      Configuration.browserCapabilities = options;
+//    }
+//
+//    @BeforeEach
+//    public void logger() {
+//      SelenideLogger.addListener("allure", new AllureSelenide());
+//    }
+//
+//    @AfterAll
+//    public static void tearDown() {
+//      closeWebDriver();
+//    }
+//  }
   
