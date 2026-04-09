@@ -29,7 +29,6 @@
       Configuration.browserVersion = "128.0";
       Configuration.remote = "https://user1:12234@selenoid.autotests.cloud/wd/hub";
 
-      open(TestData.automationFormUrl);
     }
 
     @Test
@@ -41,6 +40,8 @@
     @DisplayName("Заполнение всех полей формы студента, и проверка на соответствие")
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
+
+      open(TestData.automationFormUrl);
 
       registrationPage
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)

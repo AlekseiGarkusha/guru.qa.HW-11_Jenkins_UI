@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-09T10:48:18.867Z" hostname="DESKTOP-A8CGM4F" time="0.005">
+  <properties/>
+  <testcase name="initializationError" classname="tests.PositiveTest" time="0.005">
+    <failure message="java.lang.IllegalArgumentException: Class not found: 1920x1080" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Class not found: 1920x1080
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:59)
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:44)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:98)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:56)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:66)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:43)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:187)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:183)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:170)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:131)
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:102)
+	at com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:44)
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:254)
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:69)
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:67)
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:31)
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:111)
+	at com.codeborne.selenide.Selenide.open(Selenide.java:50)
+	at tests.PositiveTest.openPage(PositiveTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.qameta.allure.junit5.AllureJunit5.processFixture(AllureJunit5.java:138)
+	at io.qameta.allure.junit5.AllureJunit5.interceptBeforeAllMethod(AllureJunit5.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.ClassNotFoundException: 1920x1080
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:421)
+	at java.base/java.lang.Class.forName(Class.java:412)
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:56)
+	... 27 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+]]></system-err>
+</testsuite>
