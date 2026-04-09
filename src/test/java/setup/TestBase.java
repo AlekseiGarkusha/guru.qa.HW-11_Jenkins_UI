@@ -35,6 +35,7 @@
 
       } else {
         Configuration.browserCapabilities = options;
+        Configuration.baseUrl = "https://demoqa.com";
       }
     }
 
