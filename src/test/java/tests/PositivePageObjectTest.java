@@ -33,9 +33,9 @@
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
-      open("/automation-practice-form");
 
       registrationPage
+        .openPage()
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)
         .typeUserEmail(testData.userFakerEmail)
         .chooseGender(testData.userFakerGender)

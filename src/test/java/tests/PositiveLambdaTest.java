@@ -35,7 +35,7 @@
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
       step ("Open foarm", () -> {
-        open("/automation-practice-form");
+          registrationPage.openPage();
       });
 
       step ("fillFields", () -> {

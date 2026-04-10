@@ -22,9 +22,6 @@
 
     public class TestBase {
 
-
-    RegistrationPage registrationPage = new RegistrationPage();
-
     @BeforeEach
     void addListener() {
       SelenideLogger.addListener("AllureSelenide", new AllureSelenide());

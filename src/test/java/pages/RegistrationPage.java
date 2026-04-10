@@ -34,6 +34,14 @@ public class RegistrationPage {
 
   btnSubmit = $("#submit");
 
+  @Step("Открытие формы с проверкой на доступность")
+  public RegistrationPage openPage() {
+    open("/automation-practice-form");
+    $("#firstName").shouldBe(visible);
+
+    return this;
+  }
+
   @Step("Заполнение полей: имя и фамилии")
   public RegistrationPage typeUserName(String name, String userLastName) {
     userFirstNameInput.setValue(name);
