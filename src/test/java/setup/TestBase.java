@@ -32,7 +32,7 @@ package setup;
 
   @BeforeAll
   static void beforeAll() {
-    Configuration.baseUrl = "https://demoqa.com";
+    Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
     Configuration.browserSize = "1920x1080";
 //        Configuration.browser = "chrome";
 //        Configuration.browserVersion = "128.0";
