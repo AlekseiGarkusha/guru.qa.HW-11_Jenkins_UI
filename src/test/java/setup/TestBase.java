@@ -14,7 +14,6 @@
     import org.junit.jupiter.api.BeforeAll;
     import org.junit.jupiter.api.BeforeEach;
     import org.openqa.selenium.remote.DesiredCapabilities;
-    import pages.RegistrationPage;
 
     import java.util.Map;
 
@@ -30,9 +29,9 @@
     @BeforeAll
     static void beforeAll() {
       Configuration.baseUrl = "https://demoqa.com";
+      Configuration.browser = "chrome";
       Configuration.browserSize = "1920x1080";
-//      Configuration.browser = "chrome";
-//      Configuration.browserVersion = "128.0";
+      Configuration.browserVersion = "128.0";
 
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -40,7 +39,7 @@
         "enableVideo", true
       ));
       Configuration.browserCapabilities = capabilities;
-//      Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+      Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @AfterEach
