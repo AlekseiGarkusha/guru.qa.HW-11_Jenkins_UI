@@ -14,10 +14,11 @@
   import org.junit.jupiter.api.*;
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
+  import setup.TestBase;
 
   import static com.codeborne.selenide.Selenide.open;
 
-  public class PositivePageObjectTest {
+  public class PositivePageObjectTest extends TestBase {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
 

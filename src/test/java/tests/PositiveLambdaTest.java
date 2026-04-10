@@ -14,12 +14,13 @@
   import org.junit.jupiter.api.*;
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
+  import setup.TestBase;
 
   import static com.codeborne.selenide.Configuration.baseUrl;
   import static com.codeborne.selenide.Selenide.open;
   import static io.qameta.allure.Allure.step;
 
-  public class PositiveLambdaTest {
+  public class PositiveLambdaTest extends TestBase {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
 
