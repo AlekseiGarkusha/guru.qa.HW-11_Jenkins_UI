@@ -16,7 +16,6 @@
   import pages.components.ComparisonFieldsComponent;
   import setup.TestBase;
 
-  import static com.codeborne.selenide.Configuration.baseUrl;
   import static com.codeborne.selenide.Selenide.open;
   import static io.qameta.allure.Allure.step;
 
@@ -36,7 +35,7 @@
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
       step ("Open foarm", () -> {
-        open(baseUrl);
+        open("/automation-practice-form");
       });
 
       step ("fillFields", () -> {
