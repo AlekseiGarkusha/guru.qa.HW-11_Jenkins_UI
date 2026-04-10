@@ -16,8 +16,6 @@
   import pages.components.ComparisonFieldsComponent;
   import setup.TestBase;
 
-  import static com.codeborne.selenide.Selenide.open;
-
   public class PositivePageObjectTest extends TestBase {
     static RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
@@ -32,8 +30,7 @@
     @DisplayName("Заполнение всех полей формы студента, и проверка на соответствие")
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
-
-
+      
       registrationPage
         .openPage()
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)

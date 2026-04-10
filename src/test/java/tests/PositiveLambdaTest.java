@@ -16,7 +16,6 @@
   import pages.components.ComparisonFieldsComponent;
   import setup.TestBase;
 
-  import static com.codeborne.selenide.Selenide.open;
   import static io.qameta.allure.Allure.step;
 
   public class PositiveLambdaTest extends TestBase {

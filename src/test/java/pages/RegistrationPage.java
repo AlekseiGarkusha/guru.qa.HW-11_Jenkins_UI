@@ -9,6 +9,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static data.TestData.automationFormUrl;
 
 public class RegistrationPage {
 
@@ -36,7 +37,7 @@ public class RegistrationPage {
 
   @Step("Открытие формы с проверкой на доступность")
   public RegistrationPage openPage() {
-    open("/automation-practice-form");
+    open(automationFormUrl);
     $("#firstName").shouldBe(visible);
 
     return this;
