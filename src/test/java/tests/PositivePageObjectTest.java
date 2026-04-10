@@ -37,7 +37,7 @@
       registrationPage
         .openPage()
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)
-        .typeUserEmail(testData.userFakerEmail)
+        .typeUserEmail("test.ru")
         .chooseGender(testData.userFakerGender)
         .typeUserNumber(testData.userFakerNumber)
         .setDateOfBirth(testData.userFakerDay, testData.userFakerMonth,testData.userFakerYear)
