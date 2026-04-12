@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PropertyTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-12T09:08:11.711Z" hostname="DESKTOP-A8CGM4F" time="1.048">
+<testsuite name="tests.PropertyTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-12T10:04:16.756Z" hostname="DESKTOP-A8CGM4F" time="0.013">
   <properties/>
-  <testcase name="propertyTest()" classname="tests.PropertyTests" time="0.153"/>
-  <testcase name="propertyTestName()" classname="tests.PropertyTests" time="0.005"/>
-  <testcase name="propertyBrowserTest()" classname="tests.PropertyTests" time="0.01"/>
+  <testcase name="propertyTest()" classname="tests.PropertyTests" time="0.001"/>
+  <testcase name="propertyTestName()" classname="tests.PropertyTests" time="0.001"/>
+  <testcase name="propertyBrowserTest()" classname="tests.PropertyTests" time="0.002"/>
   <system-out><![CDATA[Test environment is: null
 My name is: alex garkusha
 Browser is: chrome
