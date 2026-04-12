@@ -47,9 +47,9 @@ public class Config {
   }
 
   public static String getBrowserVersion() {
-    String remoteBrowserVersion = System.getProperty("remoteBrowserVersion", "128.0");
-    System.out.println("Browser version is: " + remoteBrowserVersion);
-    return remoteBrowserVersion;
+    String browserVersion = System.getProperty("browserVersion", "128.0");
+    System.out.println("Browser version is: " + browserVersion);
+    return browserVersion;
   }
 
   public static Boolean getBrowserHeadless() {

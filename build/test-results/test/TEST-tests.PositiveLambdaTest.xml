@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositiveLambdaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-12T16:22:57.050Z" hostname="DESKTOP-A8CGM4F" time="38.052">
+<testsuite name="tests.PositiveLambdaTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-12T17:10:47.987Z" hostname="DESKTOP-A8CGM4F" time="10.76">
   <properties/>
-  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveLambdaTest" time="38.052"/>
+  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveLambdaTest" time="10.76">
+    <failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Requested environment is not available &#10;Host info: host: 'DESKTOP-A8CGM4F', ip: '192.168.88.214'&#10;Build info: version: '4.13.0', revision: 'ba948ece5b*'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'&#10;selenide.remote: https://user1:1234@selenoid.autotests.cloud/wd/hub&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 130, goog:chromeOptions: {args: [--remote-allow-origins=*, --proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]&#10;selenide.url: https://demoqa.com/automation-practice-form&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 130, goog:chromeOptions: {args: [--remote-allow-origins=*, --proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}&#10;selenide.baseUrl: https://demoqa.com" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Requested environment is not available 
+Host info: host: 'DESKTOP-A8CGM4F', ip: '192.168.88.214'
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+selenide.remote: https://user1:1234@selenoid.autotests.cloud/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 130, goog:chromeOptions: {args: [--remote-allow-origins=*, --proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]
+selenide.url: https://demoqa.com/automation-practice-form
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 130, goog:chromeOptions: {args: [--remote-allow-origins=*, --proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}
+selenide.baseUrl: https://demoqa.com
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at app//com.codeborne.selenide.webdriver.RemoteDriverFactory.create(RemoteDriverFactory.java:24)
+	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:114)
+	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67)
+	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113)
+	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52)
+	at app//com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:205)
+	at app//com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:190)
+	at app//com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:152)
+	at app//com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130)
+	at app//com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65)
+	at app//com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:223)
+	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:71)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104)
+	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:69)
+	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
+	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:102)
+	at app//com.codeborne.selenide.Selenide.open(Selenide.java:53)
+	at app//pages.RegistrationPage.openPage(RegistrationPage.java:40)
+	at app//tests.PositiveLambdaTest.lambda$practiceFormTest$0(PositiveLambdaTest.java:37)
+	at app//io.qameta.allure.Allure.lambda$step$0(Allure.java:112)
+	at app//io.qameta.allure.Allure.lambda$step$1(Allure.java:126)
+	at app//io.qameta.allure.Allure.step(Allure.java:180)
+	at app//io.qameta.allure.Allure.step(Allure.java:124)
+	at app//io.qameta.allure.Allure.step(Allure.java:111)
+	at app//tests.PositiveLambdaTest.practiceFormTest(PositiveLambdaTest.java:36)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.IllegalStateException: No webdriver is bound to current thread: 1. You need to call open(url) first.
+		at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.lambda$currentThreadDriver$1(WebDriverThreadLocalContainer.java:180)
+		at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+		at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.currentThreadDriver(WebDriverThreadLocalContainer.java:179)
+		at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:142)
+		at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:112)
+		at helpers.Attach.screenshotAs(Attach.java:20)
+		at setup.TestBase.addAttachments(TestBase.java:49)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at io.qameta.allure.junit5.AllureJunit5.processFixture(AllureJunit5.java:138)
+		at io.qameta.allure.junit5.AllureJunit5.interceptAfterEachMethod(AllureJunit5.java:124)
+		... 2 more
+</failure>
+  </testcase>
   <system-out><![CDATA[Base Address is: https://demoqa.com
 Browser is: chrome
 Base  size is: 1920*1080
-Browser version is: 128.0
+Browser version is: 130
 Browser Headless is: false
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=128.0.6613.137 Platform=linux
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (6f33686139c8f1d9149def3440fba107)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (6f33686139c8f1d9149def3440fba107),proxy=null,downloadsFolder=null] in 1 [size=1]
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
-[Test worker] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter attachName
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> RemoteWebDriver: chrome on linux (6f33686139c8f1d9149def3440fba107)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 168 ms
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (null),proxy=null,downloadsFolder=null] in 1 [size=0]
 ]]></system-err>
 </testsuite>
