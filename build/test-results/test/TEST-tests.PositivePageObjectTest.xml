@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositivePageObjectTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-12T10:03:48.727Z" hostname="DESKTOP-A8CGM4F" time="28.017">
+<testsuite name="tests.PositivePageObjectTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-12T16:23:35.804Z" hostname="DESKTOP-A8CGM4F" time="30.718">
   <properties/>
-  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositivePageObjectTest" time="28.017"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositivePageObjectTest" time="30.718"/>
+  <system-out><![CDATA[Base Address is: https://demoqa.com
+Browser is: chrome
+Base  size is: 1920*1080
+Browser version is: 128.0
+Browser Headless is: false
+]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=128.0.6613.137 Platform=linux
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (14dcde135568eb1dbe3baed9787072bc)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (14dcde135568eb1dbe3baed9787072bc),proxy=null,downloadsFolder=null] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (2c7a1d8c2f5bc6f349e83ebe3a2ea4f1)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (2c7a1d8c2f5bc6f349e83ebe3a2ea4f1),proxy=null,downloadsFolder=null] in 1 [size=1]
 [Test worker] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter attachName
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> RemoteWebDriver: chrome on linux (14dcde135568eb1dbe3baed9787072bc)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 177 ms
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> RemoteWebDriver: chrome on linux (2c7a1d8c2f5bc6f349e83ebe3a2ea4f1)...
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 194 ms
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (null),proxy=null,downloadsFolder=null] in 1 [size=0]
 ]]></system-err>
 </testsuite>
