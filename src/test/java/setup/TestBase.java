@@ -13,6 +13,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import tests.Config;
 
@@ -29,20 +31,55 @@ public class TestBase {
 
   @BeforeAll
   static void beforeAll() {
-    Configuration.baseUrl = Config.getBaseUrl();
-    Configuration.browser = Config.getBrowser();
-    Configuration.browserSize = Config.getBrowserSize();
-    Configuration.browserVersion = Config.getBrowserVersion();
-    Configuration.headless = Config.getBrowserHeadless();
-    Configuration.pageLoadStrategy = "eager";
+    String browser = Config.getBrowser().toLowerCase();
 
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+    Configuration.baseUrl = Config.getBaseUrl();
+    Configuration.browser = browser;
+    Configuration.browserSize = Config.getBrowserSize();
+    Configuration.pageLoadStrategy = "eager";
+    Configuration.remote = Config.getRemoteUrl();
+
+    Map<String, Object> selenoidOptions = Map.of(
       "enableVNC", true,
       "enableVideo", true
-    ));
-    Configuration.browserCapabilities = capabilities;
-    Configuration.remote = Config.getRemoteUrl();
+    );
+
+    switch (browser) {
+
+      case "chrome" -> {
+        ChromeOptions options = new ChromeOptions();
+
+        options.setCapability("browserVersion", Config.getBrowserVersion());
+
+        options.setCapability("selenoid:options", selenoidOptions);
+
+        Configuration.browserCapabilities = options;
+      }
+
+      case "firefox" -> {
+        FirefoxOptions options = new FirefoxOptions();
+
+        options.setCapability("browserVersion", Config.getBrowserVersion());
+
+        options.setCapability("selenoid:options", selenoidOptions);
+
+        Configuration.browserCapabilities = options;
+      }
+
+      case "opera" -> {
+        ChromeOptions options = new ChromeOptions();
+
+        options.setBinary("/usr/bin/opera"); // важно для Selenoid image
+
+        options.setCapability("browserVersion", Config.getBrowserVersion());
+
+        options.setCapability("selenoid:options", selenoidOptions);
+
+        Configuration.browserCapabilities = options;
+      }
+
+      default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
+    }
   }
 
   @AfterEach
