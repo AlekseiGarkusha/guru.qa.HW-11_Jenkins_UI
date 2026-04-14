@@ -1,7 +1,5 @@
 package tests;
 
-import static java.lang.Boolean.parseBoolean;
-
 public class Config {
 
   public static String propertyTest() {
@@ -42,9 +40,9 @@ public class Config {
       throw new RuntimeException("Login/password not provided");
     }
 
-    return "https://" + login + ":" + password
-      + "@selenoid.autotests.cloud/wd/hub";
-  }
+      return "https://" + login + ":" + password
+        + "@selenoid.autotests.cloud/wd/hub";
+    }
 
   public static String getBrowserVersion() {
     String browserVersion = System.getProperty("browserVersion", "128.0");
@@ -59,9 +57,9 @@ public class Config {
   }
 
   public static String getBrowserSize() {
-    String remoteBrowserSize = System.getProperty("remoteBrowserSize", "1920*1080");
+    String remoteBrowserSize = System.getProperty("remoteBrowserSize", "1920x1080");
 
-    System.out.println("Base  size is: " + remoteBrowserSize);
+    System.out.println("Base size is: " + remoteBrowserSize);
     return remoteBrowserSize;
   }
 
