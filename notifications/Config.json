@@ -2,7 +2,7 @@
   "base": {
     "project": "Test Project",
     "environment": "Alex_tests",
-    "comment": "Tests comments",
+    "comment": "",
     "reportLink": "",
     "language": "en",
     "allureFolder": "build/allure-report",
@@ -15,4 +15,3 @@
     "chat": "454357613"
   }
 }
-
