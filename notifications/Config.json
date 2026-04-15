@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "Test Project",
+    "environment": "Alex_tests",
+    "comment": "Tests comments",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "build/allure-report",
+    "enableChart": true,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E",
+    "chat": "454357613"
+  }
+}

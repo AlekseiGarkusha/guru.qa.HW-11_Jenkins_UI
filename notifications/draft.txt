@@ -1,0 +1,29 @@
+8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E
+
+
+https://api.telegram.org/bot8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E/getUpdates
+
+454357613
+
+
+
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "454357613", "text": "Первый запуск тестов Alex-tests", "disable_notification": true}' https://api.telegram.org/bot8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E/sendMessage
+
+java "-DconfigFile=Config.json" -jar ./notifications/allure-notifications-4.11.0.jar
+
+
+
+
+Правильный вариант
+
+$body = @{
+  chat_id = "454357613"
+  text = "Первый запуск тестов Alex-tests"
+  disable_notification = $true
+} | ConvertTo-Json
+
+Invoke-RestMethod `
+  -Uri "https://api.telegram.org/bot8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E/sendMessage" `
+  -Method Post `
+  -Body $body `
+  -ContentType "application/json"

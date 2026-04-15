@@ -62,4 +62,10 @@ tasks.withType(Test) {
   }
 }
 
+tasks.register('simple_test', Test) {
+  useJUnitPlatform {
+    includeTags("simple")
+  }
+}
+
 

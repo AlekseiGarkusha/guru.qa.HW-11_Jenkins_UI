@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositiveLambdaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-14T17:58:52.616Z" hostname="DESKTOP-A8CGM4F" time="36.115">
+<testsuite name="tests.PositiveLambdaTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-04-15T20:36:00.886Z" hostname="DESKTOP-A8CGM4F" time="36.588">
   <properties/>
-  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveLambdaTest" time="36.115"/>
+  <testcase name="Заполнение всех полей формы студента, и проверка на соответствие" classname="tests.PositiveLambdaTest" time="36.588">
+    <failure message="Invalid element state [#submit]: element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1285, 767). Other element would receive the click: &lt;div role=&quot;dialog&quot; aria-modal=&quot;true&quot; class=&quot;fade modal show&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;example-modal-sizes-title-lg&quot; style=&quot;display: block; padding-right: 15px;&quot;&gt;...&lt;/div&gt;&#13;&#10;Screenshot: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1776285394653.0.png&#13;&#10;Page source: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1776285394653.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1285, 767). Other element would receive the click: &lt;div role=&quot;dialog&quot; aria-modal=&quot;true&quot; class=&quot;fade modal show&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;example-modal-sizes-title-lg&quot; style=&quot;display: block; padding-right: 15px;&quot;&gt;...&lt;/div&gt;" type="com.codeborne.selenide.ex.InvalidStateException">Invalid element state [#submit]: element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1285, 767). Other element would receive the click: &lt;div role=&quot;dialog&quot; aria-modal=&quot;true&quot; class=&quot;fade modal show&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;example-modal-sizes-title-lg&quot; style=&quot;display: block; padding-right: 15px;&quot;&gt;...&lt;/div&gt;
+Screenshot: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1776285394653.0.png
+Page source: file:/D:/Kr.Tech/guru/guru.qa.HW-11_Jenkins_UI/build/reports/tests/1776285394653.0.html
+Timeout: 4 s.
+Caused by: ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1285, 767). Other element would receive the click: &lt;div role=&quot;dialog&quot; aria-modal=&quot;true&quot; class=&quot;fade modal show&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;example-modal-sizes-title-lg&quot; style=&quot;display: block; padding-right: 15px;&quot;&gt;...&lt;/div&gt;
+	at app//com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy27.click(Unknown Source)
+	at app//pages.RegistrationPage.clickBtnSubmit(RegistrationPage.java:122)
+	at app//tests.PositiveLambdaTest.lambda$practiceFormTest$1(PositiveLambdaTest.java:52)
+	at app//io.qameta.allure.Allure.lambda$step$0(Allure.java:112)
+	at app//io.qameta.allure.Allure.lambda$step$1(Allure.java:126)
+	at app//io.qameta.allure.Allure.step(Allure.java:180)
+	at app//io.qameta.allure.Allure.step(Allure.java:124)
+	at app//io.qameta.allure.Allure.step(Allure.java:111)
+	at app//tests.PositiveLambdaTest.practiceFormTest(PositiveLambdaTest.java:40)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1285, 767). Other element would receive the click: &lt;div role=&quot;dialog&quot; aria-modal=&quot;true&quot; class=&quot;fade modal show&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;example-modal-sizes-title-lg&quot; style=&quot;display: block; padding-right: 15px;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=128.0.6613.137)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [85716205ce98a51ddade61dcb5868818, clickElement {id=f.105B7834235682B6C538B295007ED415.d.06F3D067AA36AD3EBF6418E98FB045EB.e.118}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0.6613.137, chrome: {chromedriverVersion: 128.0.6613.18 (7d504c2c60ba..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35989}, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: linux, proxy: Proxy(), se:cdp: ws://selenoid.autotests.clo..., se:cdpVersion: 128.0.6613.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on linux (85716205ce98a51ddade61dcb5868818)] -&gt; css selector: #submit]
+Session ID: 85716205ce98a51ddade61dcb5868818
+	at java.base@21.0.7/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base@21.0.7/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base@21.0.7/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at app//com.codeborne.selenide.commands.Click.defaultClick(Click.java:97)
+	at app//com.codeborne.selenide.commands.Click.click(Click.java:54)
+	at app//com.codeborne.selenide.commands.Click.execute(Click.java:31)
+	at app//com.codeborne.selenide.commands.Click.execute(Click.java:21)
+	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:165)
+	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	... 13 more
+</failure>
+  </testcase>
   <system-out><![CDATA[Base Address is: https://demoqa.com
 Browser is: chrome
 Base size is: 1920x1080
@@ -12,12 +60,12 @@ Browser Headless is: false
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=128.0.6613.137 Platform=linux
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (46e53fab282697dc8b5c50f571e4e16c)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (46e53fab282697dc8b5c50f571e4e16c),proxy=null,downloadsFolder=null] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (85716205ce98a51ddade61dcb5868818)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (85716205ce98a51ddade61dcb5868818),proxy=null,downloadsFolder=null] in 1 [size=1]
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
 [Test worker] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter attachName
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> RemoteWebDriver: chrome on linux (46e53fab282697dc8b5c50f571e4e16c)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 160 ms
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> RemoteWebDriver: chrome on linux (85716205ce98a51ddade61dcb5868818)...
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 222 ms
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: chrome on linux (null),proxy=null,downloadsFolder=null] in 1 [size=0]
 ]]></system-err>
 </testsuite>
