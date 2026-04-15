@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Apr 15 23:36:00 MSK 2026","Wed Apr 15 23:36:37 MSK 2026","36605","","tests.PositiveLambdaTest","","tests.PositiveLambdaTest","practiceFormTest","Заполнение всех полей формы студента, и проверка на соответствие",""
+"passed","Wed Apr 15 23:36:38 MSK 2026","Wed Apr 15 23:37:04 MSK 2026","26585","","tests.PositivePageObjectTest","","tests.PositivePageObjectTest","practiceFormTest","Заполнение всех полей формы студента, и проверка на соответствие",""
+"passed","Wed Apr 15 23:35:56 MSK 2026","Wed Apr 15 23:35:57 MSK 2026","181","","tests.NewTests","","tests.NewTests","test","test()",""
