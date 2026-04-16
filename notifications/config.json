@@ -6,9 +6,7 @@
     "reportLink": "",
     "language": "en",
     "allureFolder": "allure-report",
-    "enableChart": false,
-    "enableSuitesPublishing": false,
-    "customData": {}
+    "enableChart": true
   },
   "telegram": {
     "token": "8775129469:AAEa-LdCgY5a761pv1k5aEIEjQzAcrSpc-E",
