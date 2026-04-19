@@ -12,6 +12,8 @@ target/
 *.log
 
 ### IntelliJ IDEA ###
+.build
+.build/
 .idea
 .idea/
 .idea/modules.xml
