@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.StepsAttachments" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-04-16T17:43:52.541Z" hostname="DESKTOP-A8CGM4F" time="10.054">
-  <properties/>
-  <testcase name="Создание Issue для автоматизированного пользователя" classname="tests.StepsAttachments" time="7.7"/>
-  <testcase name="Создание Issue для автоматизированного пользователя" classname="tests.StepsAttachments" time="2.345"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
