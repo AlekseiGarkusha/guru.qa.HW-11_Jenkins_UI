@@ -1,60 +1,61 @@
-  /* Расширяющий класс для:
-   * Вход в систему
-   * Открытие страницы
-   * Закрытие страницы
-   */
+package setup;
 
-//  package setup;
+/* Расширяющий класс для:
+ * Вход в систему
+ * Открытие страницы
+ * Закрытие страницы
+ */
 
-  import com.codeborne.selenide.Configuration;
-  import com.codeborne.selenide.logevents.SelenideLogger;
-  import io.qameta.allure.selenide.AllureSelenide;
-  import org.junit.jupiter.api.AfterAll;
-  import org.junit.jupiter.api.BeforeAll;
-  import org.junit.jupiter.api.BeforeEach;
-  import org.openqa.selenium.chrome.ChromeOptions;
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import com.github.javafaker.Options;
+import helpers.Attach;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import tests.Config;
 
-  import static com.codeborne.selenide.Selenide.closeWebDriver;
+import java.util.Map;
 
-//  public class TestBase {
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-//    @BeforeAll
-//    public static void setup() {
-//      ChromeOptions options = new ChromeOptions();
-//      options.addArguments("--remote-allow-origins=*");
-//
-//      String remote = System.getProperty("remote", "false");
-//
-//      Configuration.browser = System.getProperty("browser", "chrome");
-//      Configuration.browserSize = System.getProperty("resolution", "1920x1080");
-//      Configuration.timeout = 5000;
-//
-//      if ("true".equals(remote)) {// 🔥 Jenkins / CI
-//
-//        Configuration.remote = System.getProperty("remoteUrl");
-//
-//        options.addArguments("--headless");
-//        options.addArguments("--no-sandbox");
-//        options.addArguments("--disable-dev-shm-usage");
-//
-//      } else {
-//        // 💻 Локально
-//
-//        Configuration.remote = null;
-//        Configuration.baseUrl = "https://demoqa.com";
-//      }
-//
-//      Configuration.browserCapabilities = options;
-//    }
-//
-//    @BeforeEach
-//    public void logger() {
-//      SelenideLogger.addListener("allure", new AllureSelenide());
-//    }
-//
-//    @AfterAll
-//    public static void tearDown() {
-//      closeWebDriver();
-//    }
-//  }
-  
+public class TestBase {
+
+  @BeforeEach
+  void addListener() {
+    SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+  }
+
+  @BeforeAll
+  static void beforeAll() {
+    Configuration.baseUrl = Config.getBaseUrl();
+    Configuration.browser = Config.getBrowser();
+    Configuration.browserSize = Config.getBrowserSize();
+    Configuration.browserVersion = Config.getBrowserVersion();
+    Configuration.headless = Config.getBrowserHeadless();
+    Configuration.pageLoadStrategy = "eager";
+
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+      "enableVNC", true,
+      "enableVideo", true
+    ));
+    ChromeOptions options = new ChromeOptions();
+    Configuration.remote = Config.getRemoteUrl();
+    Configuration.browserCapabilities = options;
+  }
+
+  @AfterEach
+  void addAttachments() {
+    Attach.screenshotAs("Last screenshot");
+    Attach.pageSource();
+    Attach.browserConsoleLogs();
+    Attach.addVideo();
+    Attach.attachAsText("Some file", "Some content");
+    closeWebDriver();
+  }
+}

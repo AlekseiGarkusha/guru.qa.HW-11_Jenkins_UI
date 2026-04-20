@@ -4,9 +4,12 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import pages.components.CalenderComponent;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static data.TestData.automationFormUrl;
 
 public class RegistrationPage {
 
@@ -31,6 +34,14 @@ public class RegistrationPage {
     userCurrentAddress = $("#currentAddress"),
 
   btnSubmit = $("#submit");
+
+  @Step("Открытие формы с проверкой на доступность")
+  public RegistrationPage openPage() {
+    open(automationFormUrl);
+    $("#firstName").shouldBe(visible);
+
+    return this;
+  }
 
   @Step("Заполнение полей: имя и фамилии")
   public RegistrationPage typeUserName(String name, String userLastName) {
@@ -109,7 +120,7 @@ public class RegistrationPage {
   @Step("Подтвержение формы")
   public RegistrationPage clickBtnSubmit() {
     btnSubmit.scrollTo().click();
-    $(".modal-content").shouldBe(visible);
+    $(".modal-content").shouldBe(visible, Duration.ofSeconds(10));
 
     return this;
   }
