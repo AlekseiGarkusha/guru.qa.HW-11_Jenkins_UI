@@ -2,6 +2,8 @@
 .idea
 allure-results
 build
+build/
+build/reports/
 gradle/wrapper
 notifications
 **/build/
