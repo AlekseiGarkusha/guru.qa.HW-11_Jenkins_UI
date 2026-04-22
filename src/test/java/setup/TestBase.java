@@ -32,13 +32,12 @@ public class TestBase {
 
   @BeforeAll
   static void beforeAll() {
-    Configuration.baseUrl = Config.getBaseUrl();
-    Configuration.browser = Config.getBrowser();
-    Configuration.browserSize = Config.getBrowserSize();
-    Configuration.browserVersion = Config.getBrowserVersion();
-    Configuration.headless = Config.getBrowserHeadless();
+    Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+    Configuration.browser = System.getProperty("browser", "chrome");
+    Configuration.browserSize = System.getProperty("remoteBrowserSize", "1920x1080");
+    Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+    Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
     Configuration.pageLoadStrategy = "eager";
-
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("selenoid:options", Map.<String, Object>of(
       "enableVNC", true,
