@@ -4,6 +4,7 @@
 .gradle/wrapper
 target/
 .target/selenide-reports
+build/
 
 #!gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -25,6 +26,8 @@ target/
 *.ipr
 out/
 
+# ===== Allure =====
+allure-results/
 
 ### Eclipse ###
 .apt_generated
@@ -50,3 +53,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+
+
+

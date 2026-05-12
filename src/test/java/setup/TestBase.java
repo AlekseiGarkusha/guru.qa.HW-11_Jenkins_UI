@@ -13,8 +13,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import tests.Config;
 
 import java.util.Map;
 
@@ -29,11 +29,11 @@ public class TestBase {
 
   @BeforeAll
   static void beforeAll() {
-    Configuration.baseUrl = Config.getBaseUrl();
-    Configuration.browser = Config.getBrowser();
-    Configuration.browserSize = Config.getBrowserSize();
-    Configuration.browserVersion = Config.getBrowserVersion();
-    Configuration.headless = Config.getBrowserHeadless();
+    ChromeOptions options = new ChromeOptions();
+    Configuration.browser = System.getProperty("browser", "chrome");
+    Configuration.browserSize = System.getProperty("remoteBrowserSize", "1920x1080");
+    Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+    Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -41,8 +41,9 @@ public class TestBase {
       "enableVideo", true
     ));
     Configuration.browserCapabilities = capabilities;
-    Configuration.remote = Config.getRemoteUrl();
+    Configuration.remote = System.getProperty("remote");
   }
+
 
   @AfterEach
   void addAttachments() {

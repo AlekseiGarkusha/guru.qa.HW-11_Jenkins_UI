@@ -1,7 +1,3 @@
-package tests;
-
-import static java.lang.Boolean.parseBoolean;
-
 public class Config {
 
   public static String propertyTest() {
